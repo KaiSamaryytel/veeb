@@ -14,4 +14,29 @@ for ($i = $start; $i <= $end; $i++) {
     $sum += $i;
 }
 
-echo "Summa " . $start . " + 2 + " . $end . " = " . $sum;?>
+echo "Summa " . $start . " + 2 + " . $end . " = " . $sum;
+
+?>
+
+<br>
+<hr>
+
+<?php
+function otsiNumber($suvalineArv, $kindelArv){
+    echo 'Arv '.$kindelArv.' esineb arvus '.$suvalineArv;
+    $mituKorda = 0;
+    while($suvalineArv != 0){
+        $arv = $suvalineArv % 10;
+        if($arv == $kindelArv){
+            $mituKorda++;
+        }$suvalineArv = $suvalineArv / 10;
+        settype($suvalineArv, 'integer');
+    }
+    echo ' : '.$mituKorda.'  korda<br />';
+}
+otsiNumber(123456123451, 1);
+otsiNumber(123456123451, 2);
+otsiNumber(123456123451, 3);
+otsiNumber(123456123451, 4);
+?>
+
