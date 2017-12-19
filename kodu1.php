@@ -14,4 +14,4 @@ for ($i = $start; $i <= $end; $i++) {
     $sum += $i;
 }
 
-echo "Summa " . $start . " +2+ " . $end . " = " . $sum;?>
+echo "Summa " . $start . " + 2 + " . $end . " = " . $sum;?>
