@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="43c1dde5-24b0-4345-a967-5c27a412ae2f" name="ikt" url="http://kaikoppel.ikt.khk.ee">
+        <fileTransfer host="kaikoppel.ikt.khk.ee" port="22" rootFolder="/home/kaikoppeliktkhk/public_html/" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
