@@ -1,17 +1,23 @@
 <?php
+<?php
 function vorm(){
     echo '
 <form action="aeg.php" method="post">
 Eesnimi: <input type="text" name="eesnimi">
-<br />  
-Perenimi: <input type="text" name="perenimi">
-<br />  
+<br>  
+Perenimi: <input type="text" name="perenimi">  
+<br>
 Aasta: <select name="aasta">
-       <option value = "1">2014</option>
-       <option value = "2">2015</option>
-       <option value = "3">2016</option>
-       <option value = "4">2017</option>
-       <option value = "5">2018</option>
+       <option value = "1">2009</option>
+       <option value = "2">2010</option>
+       <option value = "3">2011</option>
+       <option value = "4">2012</option>
+       <option value = "6">2013</option>
+       <option value = "7">2014</option>
+       <option value = "8">2015</option>
+       <option value = "9">2016</option>
+       <option value = "10">2017</option>
+       <option value = "11">2018</option>
 </select>
 Kuu: <select name="kuu">
        <option value = "1">Jaanuar</option>
@@ -60,7 +66,7 @@ Päev: <select name="paev">
          <option value="30">30</option>
          <option value="31">31</option>
 </select>
-<br />
+<br>
 <input type="submit" value="Registreeri">
 </form>
 ';
