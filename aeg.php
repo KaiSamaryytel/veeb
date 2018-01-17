@@ -1,5 +1,4 @@
 <?php
-<?php
 function vorm(){
     echo '
 <form action="aeg.php" method="post">
@@ -73,3 +72,5 @@ Päev: <select name="paev">
 }
 
 vorm();
+
+?>
