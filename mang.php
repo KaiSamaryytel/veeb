@@ -7,7 +7,10 @@
  */
 function vorm(){
     @$serveriArv = $_POST['serveriArv'];
-    $serveriArv = isset($serveriArv) ? $_POST['serveriArv'] : rand(1,20);
+    $serveriArv = isset($serveriArv) ? $serveriArv: rand(1,20);
+    $katseteArv = $_POST['katseteArv'];
+    $katseteArv = isset($katseteArv) ? ++$serveriArv: 0;
+
     echo $serveriArv.'<br/>';
     echo '
    <form action="game.php" method="post">
