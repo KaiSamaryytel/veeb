@@ -5,11 +5,11 @@
  * Date: 19.01.2018
  * Time: 12:31
  */
-require_once 'db_config.php'; //nõuame konfiguratsioonifaili sisu kasutamist
+require_once 'db_conf.php'; //nõuame konfiguratsioonifaili sisu kasutamist
 
 //andmebaasi serveriga ühendamine ja
 //andmebaasi valik
-function_yhendus(){
+function yhendus(){
     $yhendus = mysqli_connect(DB_HOST, DB_USER, DB_PASS,DB_NAME);
     if(!$yhendus){
         echo 'Puudub ühendus andmebaasi serveriga<br/>';
@@ -17,8 +17,39 @@ function_yhendus(){
         echo mysqli_connect_errno().'<br/>';
         return false;
     } else {
-        echo 'Ühendus andmebaasiserveriga on olemas <br/>;'
+        echo 'Ühendus andmebaasiserveriga on olemas <br/>';
         return $yhendus;
     }
 }
 
+//päringu saatmise funktsioon
+function saadaParing($yhendus, $sql){
+    $tulemus = mysqli_query($yhendus, $sql);
+    if(!$tulemus){
+        echo 'Probleem päringuga'.sql.'<br/>';
+        echo mysqli_error($yhendus).'<br/>';
+        echo mysqli_errno($yhendus).'<br/>';
+        return false;
+    } else {
+        echo'Päring läks läbi.<br/>';
+        return $tulemus;
+    }
+}
+
+//andmetega päringu saatmise funktsioon
+function annaAndmed($yhendus, $sql)
+{
+    $tulemus = saadaParing($yhendus, $sql);
+    $andmed = array(); //massiiv, kuhu paneme päringuga saadud andmed
+    if ($tulemus != false) {
+        while ($rida = mysqli_fetch_assoc($tulemus)) {
+            $andmed[] = $rida;
+        }
+    }
+    if (count($andmed) == 0) {
+        return false;
+    } else {
+        //tagastame päringu andmetega täidetud massiivi
+        return $andmed;
+    }
+}    
