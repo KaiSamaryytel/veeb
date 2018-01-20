@@ -52,4 +52,4 @@ function annaAndmed($yhendus, $sql)
         //tagastame päringu andmetega täidetud massiivi
         return $andmed;
     }
-}    
+}

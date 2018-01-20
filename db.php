@@ -11,4 +11,8 @@ require_once 'db_functions.php';
 $dbYhendus = yhendus();
 //koostame sql lause ja saadame andmebaasi
 $sql = 'SHOW TABLES';
-$tulemus = saadaParing($dbYhendus, $sql);
+$tulemus = annaAndmed($dbYhendus, $sql);
+//uurime tulemuse sisu teksti kujul
+echo '<pre>';
+print_r($tulemus);
+echo '</pre>';
