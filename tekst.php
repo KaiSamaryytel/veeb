@@ -12,9 +12,11 @@ class tekst
     var $sone = ''; //teksti kirjeldavad sõnad
     //klassi tegevused
     //meetodid
-    function maaraTekst($sone)}
-    $this->sone = $sone;
+    function maaraTekst($sone)
+    {
+        $this->sone = $sone;
     }
+
     //teksti väljastamine
     function prindiTekst(){
         echo $this->sone.'<br/>';
