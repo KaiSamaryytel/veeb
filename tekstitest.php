@@ -18,8 +18,16 @@ $minuTekst->prindiTekst();
 
 //loome veel ühe objekti
 $mustTekst = new tekst('Must tekst');
-    echo <'pre>';
+echo '<pre>';
 print_r($mustTekst);
-echo <'/pre>';
+echo '</pre>';
 //prindime välja
 $mustTekst->prindiTekst();
+
+require_once 'vtekst.php';
+//loome värvilise teksti ja määrame sisu
+$punaneTekst = new vtekst('Punane tekst', '#FF0000');
+echo '<pre>';
+print_r($punaneTekst);
+echo '</pre>';
+$punaneTekst->prindiTekst();
