@@ -8,3 +8,12 @@
 require_once 'tekst.php';
 
 //loome teksti objekti
+$minuTekst = new tekst();
+//määrame tekstite konkreetse sisu
+$minuTekst->maaraTekst('Tere Maailm!');
+//vaatame, mis on objekti sees
+echo '<pre>';
+print_r($minuTekst);
+echo'</pre>';
+//prindime välja
+$minuTekst->prindiTekst();
