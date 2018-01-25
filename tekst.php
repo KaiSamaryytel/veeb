@@ -9,11 +9,19 @@
 class tekst
 {//klassi algus
     //klassi omadused - väljad - fieldis
-    var $sone = ''; //teksti kirjeldavad sõnad
+    var $sone = '';
+
+    /**
+     * tekst constructor.
+     * @param string $sone
+     */
+    public function __construct($sone)
+    {
+        $this->sone = $sone;
+    } //teksti kirjeldavad sõnad
     //klassi tegevused
     //meetodid
-    function maaraTekst($sone)
-    {
+    function maaraTekst($sone){
         $this->sone = $sone;
     }
 
